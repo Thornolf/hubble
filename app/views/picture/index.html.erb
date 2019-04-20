@@ -1,10 +1,17 @@
-<div class="card" style="width: 70rem;">
-  <img src="<%= @info["url"] %>" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title"><%= @info["title"] %></h5>
-    <p class="card-text">
-      <%= @info["explanation"] %>
-      <%= @info["date"] %>
-    </p>
+<%= stylesheet_link_tag "background_image" %>
+<div class="bg">
+  <br/>
+  <div class="col-xs-1" align="center">
+    <div class="card" style="width: 70rem;">
+      <img src="<%= @info["url"] %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= @info["title"] %></h5>
+        <p class="card-text">
+          <%= @info["explanation"] %>
+          <%= @info["date"] %>
+        </p>
+      </div>
+    </div>
   </div>
+  <br/>
 </div>
