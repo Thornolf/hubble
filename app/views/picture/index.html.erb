@@ -1,4 +1,10 @@
-<h1><%= @info["title"] %></h1>
-<img src="<%= @info["url"] %>" />
-<p><%= @info["explanation"] %></p>
-<p><%= @info["date"] %></p>
+<div class="card" style="width: 70rem;">
+  <img src="<%= @info["url"] %>" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= @info["title"] %></h5>
+    <p class="card-text">
+      <%= @info["explanation"] %>
+      <%= @info["date"] %>
+    </p>
+  </div>
+</div>
