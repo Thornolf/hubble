@@ -15,3 +15,23 @@
   </div>
   <br/>
 </div>
+
+
+<div class="row">
+  <% @info_image["collection"]["items"].each do |img| %>
+    <div class="col">
+      <div class="col-xs-1" align="center">
+        <div class="card" style="width: 70rem;">
+          <img src="<%= img["links"][0]["href"] %>" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title"><%= img["data"][0]["title"] %></h5>
+            <p class="card-text">
+              <%= img["data"][0]["description"] %>
+            </p>
+          </div>
+        </div>
+      </div>
+      <br/>
+    </div>
+  <% end %>
+</div>
