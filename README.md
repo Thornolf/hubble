@@ -1,24 +1,54 @@
-# README
+Installation de l'environnement pour le projet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RVM :
 
-Things you may want to cover:
+``gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3``
 
-* Ruby version
+``curl -sSL https://get.rvm.io | bash -s stable --ruby``
 
-* System dependencies
+``source /usr/local/rvm/scripts/rvm`` 
 
-* Configuration
+Ruby :
 
-* Database creation
+``rvm get stable --autolibs=enable``
 
-* Database initialization
+``rvm install ruby-2.5.1``
 
-* How to run the test suite
+``rvm --default use ruby-2.5.1``
 
-* Services (job queues, cache servers, search engines, etc.)
+(Vérifié que Ruby est bien en 2.5.1 : ruby -v)
 
-* Deployment instructions
+NodeJS :
 
-* ...
+``curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -``
+
+``apt-get install -y nodejs``
+
+Rails : 
+
+``gem install rails ``
+
+Postgres : 
+
+``apt-get -y install postgresql postgresql-contrib libpq-dev``
+
+``su - postgres``
+
+``psql``
+
+``create role rails_dev with createdb login password 'password';``
+
+
+Dans le dépot Hubble :
+``bundle install``
+
+``rake db:setup``
+
+``rake db:migrate``
+
+``rails server``
+
+
+Aller dans 0.0.0.0/3000 
+
+Ou sur le lien : https://nasahubble.herokuapp.com/
