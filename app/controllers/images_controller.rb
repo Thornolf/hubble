@@ -5,6 +5,7 @@ class ImagesController < ApplicationController
   # GET /images.json
   def index
     @image = Image.new
+    @image.title = ""
     @images = Image.all
     @info_image = Image.get_api
   end
