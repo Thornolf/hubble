@@ -16,8 +16,6 @@ Ruby :
 
 ``rvm --default use ruby-2.5.1``
 
-(Vérifié que Ruby est bien en 2.5.1 : ruby -v)
-
 NodeJS :
 
 ``curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -``
@@ -40,6 +38,7 @@ Postgres :
 
 
 Dans le dépot Hubble :
+
 ``bundle install``
 
 ``rake db:setup``
@@ -47,7 +46,6 @@ Dans le dépot Hubble :
 ``rake db:migrate``
 
 ``rails server``
-
 
 Aller dans 0.0.0.0/3000 
 
