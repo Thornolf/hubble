@@ -4,12 +4,15 @@ class ImagesController < ApplicationController
   # GET /images
   # GET /images.json
   def index
+    @image = Image.new
     @images = Image.all
+    @info_image = Image.get_api
   end
 
   # GET /images/1
   # GET /images/1.json
   def show
+    @image = Image.new
   end
 
   # GET /images/new
@@ -25,10 +28,11 @@ class ImagesController < ApplicationController
   # POST /images.json
   def create
     @image = Image.new(image_params)
-
+    Image.modify_title(image_params[:title])
+    #@@title = image_params[:title]
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
+        format.html { redirect_to images_path, notice: 'Image was successfully created.' }
         format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
@@ -69,6 +73,6 @@ class ImagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
-      params.fetch(:image, {})
+      params.require(:image).permit(:title)
     end
 end

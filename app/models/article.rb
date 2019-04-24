@@ -1,3 +1,5 @@
+require 'net/http'
+
 class Article < ApplicationRecord
   def self.get_api_info
     nasa_api = "https://api.nasa.gov/planetary/apod?api_key=#{ENV['NASA_API_KEY']}"
