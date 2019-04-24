@@ -3,5 +3,5 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
   <%= f.input :title, label: "Chercher un terme", :value => '' %>
 
-  <%= f.button :submit %>
+  <%= f.button :submit, :value => 'Valider la recherche', :class =>"btn btn-primary" %>
 <% end %>
